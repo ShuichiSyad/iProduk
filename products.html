@@ -34,6 +34,20 @@
 </head>
 <body>
 
+<!-- Including marketcloud -->
+<script type="text/javascript" src="marketcloud-js-master/dist/marketcloud.min.js"></script>
+<script type="text/javascript">
+	var marketcloud = new Marketcloud.Client({
+	publicKey : '2a08dea5-e995-4f49-bce6-9f046459ed1f',
+	secretKey : 'dOWxQIyiZJr-aDeC2LTswCWNPDwrsTXuBrsE2aHf3eQ-'
+	})
+marketcloud.products.list({},function(err,products){
+	console.log(products);
+})
+	alert('hi');
+</script>
+
+
 <!-- jQuery -->
 <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <!-- Latest compiled and minified JavaScript -->
@@ -43,7 +57,7 @@
 	<div class="row">
 		<div class="col-sm-9">
 			<div class="col-sm-5"><!-- Product image -->
-			<img src="https://n3.sdlcdn.com/imgs/a/p/0/Apple-iPhone-5S-16-GB-SDL218647224-3-6017b.jpg" width="320" >
+			<img src="https://n3.sdlcdn.com/imgs/a/p/0/Apple-iPhone-5S-16-GB-SDL218647224-3-6017b.jpg" class="img-responsive" width="320" >
 			</div>
 
 			<div class="col-sm-7 well container"><!-- Product description -->
